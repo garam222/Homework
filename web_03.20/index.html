@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+            transition: 0.5s;
+        }
+        .bgcolor--blue{
+            background-color: aqua;
+        }
+
+        .bgcolor--grey{
+            background-color: lightgray;
+        }
+
+        .bgcolor--img{
+            background: url(images/LRM_EXPORT_202157600262457_20190420_193233200.jpeg) no-repeat;
+            background-size: cover;
+            
+        }
+        .btns{
+            position: relative;
+            margin: auto;
+            text-align :center;
+            font-size: 20px;
+            top: 80px;
+            display: flex;
+            justify-content: space-between;
+            width: 600px;
+        }
+
+        button{
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            background-color: white;
+            box-shadow: 0.5px 0.5px 0 0 gray;
+            font-size: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="btns">
+        <button class="btn_toggle">배경색상변경</button>
+        <button class="btn_reset">배경색상리셋</button>
+        <button class="btn_grey">배경색상변경 - 그레이</button>
+        <button class="btn_img">배경색상이미지</button>
+    </div>
+
+    <script>
+        const btntoggle = document.querySelector('.btn_toggle');
+        btntoggle.addEventListener('click',function(){
+            // bgncontainer.classList.remove('bgcolor--img')
+            document.body.classList.toggle('bgcolor--blue');
+            document.body.classList.remove('bgcolor--img','bgcolor--grey')
+        });
+
+        const btnreset = document.querySelector('.btn_reset');
+        btnreset.addEventListener('click',function(){
+            document.body.classList.remove('bgcolor--blue','bgcolor--grey','bgcolor--img')
+        });
+
+        const bggray = document.querySelector('.btn_grey');
+        bggray.addEventListener('click',function(){
+            document.body.classList.toggle('bgcolor--grey');
+            document.body.classList.remove('bgcolor--blue','bgcolor--img')
+        });
+
+        const bgncontainer = document.querySelector('.btn_img');
+        bgncontainer.addEventListener('click',function (){
+            document.body.classList.toggle('bgcolor--img')
+        })
+
+    </script>
+</body>
+</html>
