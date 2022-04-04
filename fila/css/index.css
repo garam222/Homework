@@ -1,0 +1,163 @@
+body {
+    width: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* html {
+    cursor: none;
+} */
+
+.circle { 
+
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 20px; 
+    height: 20px; 
+    border-radius: 50%;
+    background-color: #9bf50b;
+    transform: translate(0%, 0%); 
+    z-index: 100;
+
+}
+
+.wraper {
+    width: 100%;
+
+}
+
+.header {
+    width: 100%;
+    height: 1084px;
+}
+
+.line {
+    width: 100%;
+    height: 50px;
+    background-color: #0F143F;
+    top: 0;
+    z-index: 30;
+    position: absolute;
+}
+
+.text {
+    display: inline;
+    background-color: aqua;
+    width: 1920px;
+    z-index: 34;
+    height: 150px;
+    margin: auto;
+    font-size: 130px;
+    font-weight: 800;
+    display: inline-block;
+    color: white;
+    background-color: black;
+    z-index: 33;
+}
+
+MARQUEE {
+    z-index: 35;
+    top: 100px;
+    position: relative;
+}
+
+MARQUEE img {
+    animation: rotate_image 6s linear infinite;
+    transform-origin: 50% 50%;
+    top: 50px;
+}
+
+@keyframes rotate_image{ 100% { transform: rotate(360deg); } }
+
+
+.wraper .header .slideshow {
+    z-index: 30;
+    display: inline;
+    position: relative;
+    top: -450px;
+    width: 100%;
+    background-color: black;
+}
+
+ul li {
+    list-style: none;
+    display: inline-flex;
+    justify-content: space-between;
+    /* color: white; */
+    padding: 20px;
+}
+
+ul li a{
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 20%;
+}
+
+ul li a:hover{
+    text-decoration: 5px solid #D12030 underline;
+    color: #D12030;
+}
+
+.box {
+    width: 1920px;
+    display: inline-block;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    top: 50px;
+    justify-content: space-between;
+    position: relative;
+    z-index: 33;
+
+}
+.top-menu {
+    width: 700px;
+    color: white;
+    display: inline-block;
+    height: 100px;
+    float: left;
+    left: 85px;
+}
+
+.box:hover {
+    background-color: white;
+    color: black;
+    transition: 0.5s all;
+}
+
+.box:hover .sub_menu {
+    display: block;
+    transition: 0.5s all;
+}
+
+.box:hover ul li a {
+    color: black;
+}
+
+.sub_menu {
+    height: 300px;
+    position: absolute;
+    display: block;
+    width: 1920px;
+    margin: auto;
+    background-color: white;
+    display: none;
+    top: 110px;
+}
+
+.top-rightmenu{
+    color:  white;
+    float: right;
+    height: 100px;
+    display: block;
+    margin-right: 85px;
+}
+
+
+.swiper-wrapper {
+    display: inline-block;
+}
+
